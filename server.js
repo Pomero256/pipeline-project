@@ -1,6 +1,6 @@
 const express = require('express');
 const { Pool } = require('pg');
-
+const FAKE_AWS_SECRET = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
