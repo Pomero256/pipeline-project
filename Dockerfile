@@ -9,7 +9,7 @@ COPY . .
 FROM node:20-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
-ENV AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+
 COPY package*.json ./
 RUN npm ci --only=production
 COPY --from=builder /app/server.js ./server.js
